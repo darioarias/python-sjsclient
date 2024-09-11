@@ -21,7 +21,7 @@ class ResourceManager(object):
         return self.resource_class(self, data)
 
 
-class Resource(collections.MutableMapping):
+class Resource(collections.abc.MutableMapping):
     base_path = None
 
     def __init__(self, manager, attrs=None):
